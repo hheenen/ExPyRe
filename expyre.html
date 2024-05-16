@@ -1,0 +1,1227 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>expyre package &#8212; ExPyRe  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'expyre';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="expyre.cli package" href="expyre.cli.html" />
+    <link rel="prev" title="Unit testing" href="unit_testing.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ExPyRe  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="basic_use.html">Basic use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Scheduler Configuration file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="restarting.html">Restarting an interrupted process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment_variables.html">Environment Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line.html">Command line utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit_testing.html">Unit testing</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">expyre package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="expyre.cli.html">expyre.cli package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expyre.schedulers.html">expyre.schedulers package</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/expyre.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>expyre package</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subpackages">Subpackages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-expyre.config">expyre.config module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#global-variables">Global variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.config.init"><code class="docutils literal notranslate"><span class="pre">init()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.config.update_dict_leaves"><code class="docutils literal notranslate"><span class="pre">update_dict_leaves()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-expyre.func">expyre.func module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyRe"><code class="docutils literal notranslate"><span class="pre">ExPyRe</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyRe.cancel"><code class="docutils literal notranslate"><span class="pre">ExPyRe.cancel()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyRe.clean"><code class="docutils literal notranslate"><span class="pre">ExPyRe.clean()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyRe.from_jobsdb"><code class="docutils literal notranslate"><span class="pre">ExPyRe.from_jobsdb()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyRe.get_results"><code class="docutils literal notranslate"><span class="pre">ExPyRe.get_results()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyRe.id"><code class="docutils literal notranslate"><span class="pre">ExPyRe.id</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyRe.mark_processed"><code class="docutils literal notranslate"><span class="pre">ExPyRe.mark_processed()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyRe.start"><code class="docutils literal notranslate"><span class="pre">ExPyRe.start()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyRe.sync_remote_results_status"><code class="docutils literal notranslate"><span class="pre">ExPyRe.sync_remote_results_status()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyReJobDiedError"><code class="docutils literal notranslate"><span class="pre">ExPyReJobDiedError</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyReTimeoutError"><code class="docutils literal notranslate"><span class="pre">ExPyReTimeoutError</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-expyre.jobsdb">expyre.jobsdb module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.jobsdb.JobsDB"><code class="docutils literal notranslate"><span class="pre">JobsDB</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.jobsdb.JobsDB.add"><code class="docutils literal notranslate"><span class="pre">JobsDB.add()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.jobsdb.JobsDB.jobs"><code class="docutils literal notranslate"><span class="pre">JobsDB.jobs()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.jobsdb.JobsDB.possible_status"><code class="docutils literal notranslate"><span class="pre">JobsDB.possible_status</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.jobsdb.JobsDB.remove"><code class="docutils literal notranslate"><span class="pre">JobsDB.remove()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.jobsdb.JobsDB.status_group"><code class="docutils literal notranslate"><span class="pre">JobsDB.status_group</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.jobsdb.JobsDB.unlock"><code class="docutils literal notranslate"><span class="pre">JobsDB.unlock()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.jobsdb.JobsDB.update"><code class="docutils literal notranslate"><span class="pre">JobsDB.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-expyre.resources">expyre.resources module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.resources.Resources"><code class="docutils literal notranslate"><span class="pre">Resources</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.resources.Resources.find_nodes"><code class="docutils literal notranslate"><span class="pre">Resources.find_nodes()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-expyre.subprocess">expyre.subprocess module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.subprocess.FailedSubprocessWarning"><code class="docutils literal notranslate"><span class="pre">FailedSubprocessWarning</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.subprocess.subprocess_copy"><code class="docutils literal notranslate"><span class="pre">subprocess_copy()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.subprocess.subprocess_run"><code class="docutils literal notranslate"><span class="pre">subprocess_run()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-expyre.system">expyre.system module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.system.System"><code class="docutils literal notranslate"><span class="pre">System</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.system.System.clean_rundir"><code class="docutils literal notranslate"><span class="pre">System.clean_rundir()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.system.System.get_remotes"><code class="docutils literal notranslate"><span class="pre">System.get_remotes()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.system.System.initialize_remote_rundir"><code class="docutils literal notranslate"><span class="pre">System.initialize_remote_rundir()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.system.System.run"><code class="docutils literal notranslate"><span class="pre">System.run()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.system.System.submit"><code class="docutils literal notranslate"><span class="pre">System.submit()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-expyre.units">expyre.units module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.units.mem_to_kB"><code class="docutils literal notranslate"><span class="pre">mem_to_kB()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.units.time_to_HMS"><code class="docutils literal notranslate"><span class="pre">time_to_HMS()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.units.time_to_sec"><code class="docutils literal notranslate"><span class="pre">time_to_sec()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-expyre.util">expyre.util module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.util.remsh_cmd"><code class="docutils literal notranslate"><span class="pre">remsh_cmd()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-expyre">Module contents</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="section" id="expyre-package">
+<h1>expyre package<a class="headerlink" href="#expyre-package" title="Permalink to this heading">#</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="expyre.cli.html">expyre.cli package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="expyre.cli.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expyre.cli.html#expyre-cli-cli-module">expyre.cli.cli module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expyre.cli.html#module-expyre.cli">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="expyre.schedulers.html">expyre.schedulers package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="expyre.schedulers.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expyre.schedulers.html#module-expyre.schedulers.base">expyre.schedulers.base module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="expyre.schedulers.html#expyre.schedulers.base.Scheduler"><code class="docutils literal notranslate"><span class="pre">Scheduler</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="expyre.schedulers.html#expyre.schedulers.base.Scheduler.cancel"><code class="docutils literal notranslate"><span class="pre">Scheduler.cancel()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="expyre.schedulers.html#expyre.schedulers.base.Scheduler.hold"><code class="docutils literal notranslate"><span class="pre">Scheduler.hold()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="expyre.schedulers.html#expyre.schedulers.base.Scheduler.node_dict_env_var_commands"><code class="docutils literal notranslate"><span class="pre">Scheduler.node_dict_env_var_commands()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="expyre.schedulers.html#expyre.schedulers.base.Scheduler.release"><code class="docutils literal notranslate"><span class="pre">Scheduler.release()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="expyre.schedulers.html#expyre.schedulers.base.Scheduler.status"><code class="docutils literal notranslate"><span class="pre">Scheduler.status()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="expyre.schedulers.html#expyre.schedulers.base.Scheduler.submit"><code class="docutils literal notranslate"><span class="pre">Scheduler.submit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="expyre.schedulers.html#expyre.schedulers.base.Scheduler.unset_scheduler_env_vars"><code class="docutils literal notranslate"><span class="pre">Scheduler.unset_scheduler_env_vars()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="expyre.schedulers.html#module-expyre.schedulers.local">expyre.schedulers.local module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="expyre.schedulers.html#expyre.schedulers.local.Local"><code class="docutils literal notranslate"><span class="pre">Local</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="expyre.schedulers.html#module-expyre.schedulers.pbs">expyre.schedulers.pbs module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="expyre.schedulers.html#expyre.schedulers.pbs.PBS"><code class="docutils literal notranslate"><span class="pre">PBS</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="expyre.schedulers.html#expyre.schedulers.pbs.PBS.status"><code class="docutils literal notranslate"><span class="pre">PBS.status()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="expyre.schedulers.html#expyre.schedulers.pbs.PBS.submit"><code class="docutils literal notranslate"><span class="pre">PBS.submit()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="expyre.schedulers.html#module-expyre.schedulers.sge">expyre.schedulers.sge module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="expyre.schedulers.html#expyre.schedulers.sge.SGE"><code class="docutils literal notranslate"><span class="pre">SGE</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="expyre.schedulers.html#expyre.schedulers.sge.SGE.status"><code class="docutils literal notranslate"><span class="pre">SGE.status()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="expyre.schedulers.html#expyre.schedulers.sge.SGE.submit"><code class="docutils literal notranslate"><span class="pre">SGE.submit()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="expyre.schedulers.html#module-expyre.schedulers.slurm">expyre.schedulers.slurm module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="expyre.schedulers.html#expyre.schedulers.slurm.Slurm"><code class="docutils literal notranslate"><span class="pre">Slurm</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="expyre.schedulers.html#expyre.schedulers.slurm.Slurm.status"><code class="docutils literal notranslate"><span class="pre">Slurm.status()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="expyre.schedulers.html#expyre.schedulers.slurm.Slurm.submit"><code class="docutils literal notranslate"><span class="pre">Slurm.submit()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="expyre.schedulers.html#module-expyre.schedulers">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">#</a></h2>
+</div>
+<div class="section" id="module-expyre.config">
+<span id="expyre-config-module"></span><h2>expyre.config module<a class="headerlink" href="#module-expyre.config" title="Permalink to this heading">#</a></h2>
+<p>configuration for expyre from <code class="docutils literal notranslate"><span class="pre">config.json</span></code>. Use env var <code class="docutils literal notranslate"><span class="pre">EXPYRE_ROOT</span></code> if set.
+Otherwise (or if env var is set to <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>), search from <code class="docutils literal notranslate"><span class="pre">HOME</span></code> (or <code class="docutils literal notranslate"><span class="pre">/</span></code>, if current
+dir is not below <code class="docutils literal notranslate"><span class="pre">HOME</span></code>) down to current directory for <code class="docutils literal notranslate"><span class="pre">.expyre</span></code> or <code class="docutils literal notranslate"><span class="pre">_expyre</span></code>.
+Configuration is parsed in the same order, with deeper directories modifying previous
+ones.  <code class="docutils literal notranslate"><span class="pre">local_stage_dir</span></code> is set to deepest directory unless it is set explicitly
+in one of the found <code class="docutils literal notranslate"><span class="pre">config.json</span></code> files.</p>
+<div class="section" id="global-variables">
+<h3>Global variables<a class="headerlink" href="#global-variables" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>local_stage_dir: str</dt><dd><p>path of directory to stage jobs into</p>
+</dd>
+<dt>systems: dict</dt><dd><p>dict of expyre.system.System that jobs can run on</p>
+</dd>
+<dt>db: JobsDB</dt><dd><p>expyre.jobsdb.JobsDB database of jobs</p>
+</dd>
+</dl>
+</div>
+<dl class="py function">
+<dt class="sig sig-object py" id="expyre.config.init">
+<span class="sig-prename descclassname"><span class="pre">expyre.config.</span></span><span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/config.html#init"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.config.init" title="Permalink to this definition">#</a></dt>
+<dd><p>Initializes <code class="docutils literal notranslate"><span class="pre">root</span></code>, <code class="docutils literal notranslate"><span class="pre">systems</span></code>, <code class="docutils literal notranslate"><span class="pre">db</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="expyre.config.update_dict_leaves">
+<span class="sig-prename descclassname"><span class="pre">expyre.config.</span></span><span class="sig-name descname"><span class="pre">update_dict_leaves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d_loc</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/config.html#update_dict_leaves"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.config.update_dict_leaves" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-expyre.func">
+<span id="expyre-func-module"></span><h2>expyre.func module<a class="headerlink" href="#module-expyre.func" title="Permalink to this heading">#</a></h2>
+<p>Interface for remotely running python functions.  It pickles the function and
+its arguments, stages files (pickles as well as additional requested input files)
+to a local directory, submits to remote System (which stages out inputs, submits
+on remote queuing system, and stages outputs back in), and then unpickles results
+to return function result.  It also creates/updates the JobsDB entry for the job
+as it does these steps.</p>
+<p>Possible status (see JobsDB): created, submitted, started, succeeded/failed, processed, cleaned</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="expyre.func.ExPyRe">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">expyre.func.</span></span><span class="sig-name descname"><span class="pre">ExPyRe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_vars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_run_commands</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_run_commands</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">try_restart_from_prev</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hash_ignore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_from_db_info</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/func.html#ExPyRe"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.func.ExPyRe" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Create Queued Remote Function object, pickles function and inputs, stores files
+in local stage dir, and adds to job database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – name of job</p></li>
+<li><p><strong>input_files</strong> (<em>list</em><em>(</em><em>str</em><em> | </em><em>Path</em><em>)</em><em>, </em><em>optional</em>) – input files that function will need.  Relative paths without ‘..’ path components
+files will be copied to same path relative to remote rundir on remote machine.
+Absolute paths will result in files copied into top level remote rundir</p></li>
+<li><p><strong>env_vars</strong> (<em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>optional</em>) – list of env vars to set in remote queuing script</p></li>
+<li><p><strong>pre_run_commands</strong> (<em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>optional</em>) – list of commands, one per line, to run at start of remote queuing script, after commands
+in config.json that are used for system</p></li>
+<li><p><strong>post_run_commands</strong> (<em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>optional</em>) – list of commands, one per line, to run at end of remote queuing script, after actual task</p></li>
+<li><p><strong>output_files</strong> (<em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>optional</em>) – output files to be copied back after evaluation is done</p></li>
+<li><p><strong>try_restart_from_prev</strong> (<em>bool</em><em>, </em><em>default True</em>) – try to restart from previous call, based on hash of function, arguments, and input files</p></li>
+<li><p><strong>hash_ignore</strong> (<em>list</em><em>(</em><em>int</em><em> or </em><em>str</em><em>)</em><em>, </em><em>optional</em>) – args elements (int) or kwargs items (str) to ignore when making hash to determine if run is
+identical to some previous one</p></li>
+<li><p><strong>function</strong> (<em>Callable</em>) – function to call</p></li>
+<li><p><strong>args</strong> (<em>list</em>) – positional arguments to function</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – keyword arguments to function</p></li>
+<li><p><strong>_from_db_info</strong> (<em>dict</em><em>, </em><em>optional</em><em> (</em><em>intended for internal use</em><em>)</em>) – restart is from db, and dict contains special arguments: remote_id, system_name, status, stage_dir</p></li>
+<li><p><strong>JobsDB</strong><strong>)</strong> (<em>Possible status</em><em> (</em><em>see</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="expyre.func.ExPyRe.cancel">
+<span class="sig-name descname"><span class="pre">cancel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/func.html#ExPyRe.cancel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.func.ExPyRe.cancel" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="expyre.func.ExPyRe.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wipe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dry_run</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/func.html#ExPyRe.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.func.ExPyRe.clean" title="Permalink to this definition">#</a></dt>
+<dd><p>clean the local and remote stage directories</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wipe</strong> (<em>bool</em><em>, </em><em>default False</em>) – wipe directory completely, opposed to just writing CLEANED into files that could be large
+like python function input and output (NOTE: other staged in files or files that are created
+are not cleaned if wipe=False)</p></li>
+<li><p><strong>dry_run</strong> (<em>bool</em><em>, </em><em>default False</em>) – dry run only, print what will happen but do not actually delete or overwrite anything</p></li>
+<li><p><strong>remote_only</strong> (<em>bool</em><em>, </em><em>default False</em>) – wipe only remote dir (ignored when wipe is False)</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em><em>, </em><em>default False</em>) – verbose output</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="expyre.func.ExPyRe.from_jobsdb">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_jobsdb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_jobs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/func.html#ExPyRe.from_jobsdb"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.func.ExPyRe.from_jobsdb" title="Permalink to this definition">#</a></dt>
+<dd><p>Create a list of ExPyRe objects from JobsDB records</p>
+<dl class="simple">
+<dt>Parameters</dt><dd></dd>
+<dt>db_jobs: dict or list(dict)</dt><dd><p>one or more jobs records returned from <code class="docutils literal notranslate"><span class="pre">JobsDB.jobs()</span></code></p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>created objects</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list(<a class="reference internal" href="#expyre.func.ExPyRe" title="expyre.func.ExPyRe">ExPyRe</a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="expyre.func.ExPyRe.get_results">
+<span class="sig-name descname"><span class="pre">get_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3600</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sync_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_sync</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quiet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/func.html#ExPyRe.get_results"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.func.ExPyRe.get_results" title="Permalink to this definition">#</a></dt>
+<dd><p>Get results from a remote job</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeout</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>default 3600</em>) – Max time (in sec if int, time spec if str) to wait for job to complete, None or int &lt;= 0 to wait forever</p></li>
+<li><p><strong>check_interval</strong> (<em>int</em><em>, </em><em>default 30</em>) – Time to wait (in sec) between checks of job completion</p></li>
+<li><p><strong>sync</strong> (<em>bool</em><em>, </em><em>default True</em>) – Synchronize remote files before checking for results
+Note that if this is False and job is finished on remote system but output files haven’t been
+previously synchronize, this will wait one check_interval then raise an error</p></li>
+<li><p><strong>sync_all</strong> (<em>bool</em><em>, </em><em>default True</em>) – Sync files from all jobs (not just this one), to reduce number of separate remote copy calls</p></li>
+<li><p><strong>force_sync</strong> (<em>bool</em><em>, </em><em>default False</em>) – Sync remote files even if job’s DB status indicates that this was already done.
+Note: together with sync_all this can lead to rsync having to compare many files.</p></li>
+<li><p><strong>quiet</strong> (<em>bool</em><em>, </em><em>default False</em>) – No progress info</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em><em>, </em><em>default False</em>) – Verbose output (from remote system/scheduler commands)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>value of function</p></li>
+<li><p>string containing stdout during function</p></li>
+<li><p>string containing stderr during function</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>return, stdout, stderr</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="expyre.func.ExPyRe.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#expyre.func.ExPyRe.id" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="expyre.func.ExPyRe.mark_processed">
+<span class="sig-name descname"><span class="pre">mark_processed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/func.html#ExPyRe.mark_processed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.func.ExPyRe.mark_processed" title="Permalink to this definition">#</a></dt>
+<dd><p>Mark job as processed (usually after results have been stored someplace)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="expyre.func.ExPyRe.start">
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resources</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header_extra</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exact_fit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partial_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">python_cmd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'python3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_rerun</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/func.html#ExPyRe.start"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.func.ExPyRe.start" title="Permalink to this definition">#</a></dt>
+<dd><p>Start a job on a remote machine</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resoures</strong> (<em>dict</em><em> or </em><a class="reference internal" href="#expyre.resources.Resources" title="expyre.resources.Resources"><em>Resources</em></a>) – resources to use for job, either Resources or dict of Resources constructor kwargs</p></li>
+<li><p><strong>system_name</strong> (<em>str</em>) – name of system in config.systems</p></li>
+<li><p><strong>header_extra</strong> (<em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>optional</em>) – list of lines to add to queuing system header, appended to System.header[]</p></li>
+<li><p><strong>exact_fit</strong> (<em>bool</em><em>, </em><em>default True</em>) – use only nodes that exactly match number of tasks</p></li>
+<li><p><strong>partial_node</strong> (<em>bool</em><em>, </em><em>default False</em>) – allow jobs that take less than an entire node</p></li>
+<li><p><strong>python_cmd</strong> (<em>str</em><em>, </em><em>default python3</em>) – name of python interpreter to use on remote machine</p></li>
+<li><p><strong>force_rerun</strong> (<em>bool</em><em>, </em><em>default False</em>) – force a rerun even if self.status is not “created”</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="expyre.func.ExPyRe.sync_remote_results_status">
+<span class="sig-name descname"><span class="pre">sync_remote_results_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sync_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_sync</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/func.html#ExPyRe.sync_remote_results_status"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.func.ExPyRe.sync_remote_results_status" title="Permalink to this definition">#</a></dt>
+<dd><p>Sync files associated with results from remote machine to local stage dirs and
+updates ‘remote_status’ in jobsdb.  Note that both have to happen because other
+functions assume that if remote status has been updated files have been staged back
+as well.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sync_all</strong> (<em>bool</em><em>, </em><em>default True</em>) – sync files for all jobs on same system, to minimize number of calls to remote copy</p></li>
+<li><p><strong>force_sync</strong> (<em>bool</em><em>, </em><em>default False</em>) – sync files even if this job’s status indicates that this has already been done</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em><em>, </em><em>default False</em>) – verbose output</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="expyre.func.ExPyReJobDiedError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">expyre.func.</span></span><span class="sig-name descname"><span class="pre">ExPyReJobDiedError</span></span><a class="reference internal" href="_modules/expyre/func.html#ExPyReJobDiedError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.func.ExPyReJobDiedError" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Exception that is raised when ExPyRe remote job appears to have been killed
+for reasons other than the python process raising an exception, e.g. if it was
+out of time in the queuing system.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="expyre.func.ExPyReTimeoutError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">expyre.func.</span></span><span class="sig-name descname"><span class="pre">ExPyReTimeoutError</span></span><a class="reference internal" href="_modules/expyre/func.html#ExPyReTimeoutError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.func.ExPyReTimeoutError" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TimeoutError</span></code></p>
+<p>Exception raised when ExPyRe gave up waiting for a job to finish because it
+exceeded the timeout value</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-expyre.jobsdb">
+<span id="expyre-jobsdb-module"></span><h2>expyre.jobsdb module<a class="headerlink" href="#module-expyre.jobsdb" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="expyre.jobsdb.JobsDB">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">expyre.jobsdb.</span></span><span class="sig-name descname"><span class="pre">JobsDB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/jobsdb.html#JobsDB"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.jobsdb.JobsDB" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Database of jobs, currently implemented with sqlite.  Saves essential information
+on jobs, including local and remote id, local directory it’s staged to, system
+its been submitted to, and status.</p>
+<dl class="simple">
+<dt>Status: created - job has been created, but not yet submitted to run</dt><dd><p>submitted - job has been submitted to some queuing system
+started - job has started running
+succeeded - job has finished successfully, and results are available
+failed - job has failed
+died - job died without producing expected low level output
+processed - job has been processed, and results no longer need to be saved
+cleaned - job stage dir (local and remote) has been cleaned (large files overwritten or all files wiped)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="expyre.jobsdb.JobsDB.add">
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'created'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/jobsdb.html#JobsDB.add"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.jobsdb.JobsDB.add" title="Permalink to this definition">#</a></dt>
+<dd><p>Add a job to the DB</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>str</em>) – unique id for job (fails if id already exists)</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – name for job</p></li>
+<li><p><strong>from_dir</strong> (<em>str/Path</em>) – path to directory job is to run from</p></li>
+<li><p><strong>status</strong> (<em>str</em><em>, </em><em>default 'created'</em>) – status of job</p></li>
+<li><p><strong>system</strong> (<em>str</em><em>, </em><em>optional</em>) – system job is running on</p></li>
+<li><p><strong>remote_id</strong> (<em>str</em><em>, </em><em>optional</em>) – remote id on system</p></li>
+<li><p><strong>remote_status</strong> (<em>str</em><em>, </em><em>optional</em>) – remote status on system</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="expyre.jobsdb.JobsDB.jobs">
+<span class="sig-name descname"><span class="pre">jobs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">readable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/jobsdb.html#JobsDB.jobs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.jobsdb.JobsDB.jobs" title="Permalink to this definition">#</a></dt>
+<dd><p>Iterate through jobs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>status</strong> (<em>str</em><em> or </em><em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>default None</em>) – if not None, only report on jobs that match any status</p></li>
+<li><p><strong>id</strong> (<em>str</em><em> or </em><em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>default None</em>) – if present, include only jobs with id that match regexps in this list</p></li>
+<li><p><strong>name</strong> (<em>str</em><em> or </em><em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>default None</em>) – if present, include only jobs with name that matches regexps in this list</p></li>
+<li><p><strong>system</strong> (<em>str</em><em> or </em><em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>default None</em>) – if present, include only jobs with system in this list</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Iterator of dicts</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Iterator of dicts with fields for all DB columns for each job that matches selection criteria.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="expyre.jobsdb.JobsDB.possible_status">
+<span class="sig-name descname"><span class="pre">possible_status</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['created',</span> <span class="pre">'submitted',</span> <span class="pre">'started',</span> <span class="pre">'succeeded',</span> <span class="pre">'failed',</span> <span class="pre">'died',</span> <span class="pre">'processed',</span> <span class="pre">'cleaned']</span></em><a class="headerlink" href="#expyre.jobsdb.JobsDB.possible_status" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="expyre.jobsdb.JobsDB.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/jobsdb.html#JobsDB.remove"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.jobsdb.JobsDB.remove" title="Permalink to this definition">#</a></dt>
+<dd><p>Remove a job from the DB</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – unique id of job to remove</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="expyre.jobsdb.JobsDB.status_group">
+<span class="sig-name descname"><span class="pre">status_group</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'can_produce_results':</span> <span class="pre">['created',</span> <span class="pre">'submitted',</span> <span class="pre">'started',</span> <span class="pre">'succeeded',</span> <span class="pre">'died'],</span> <span class="pre">'ongoing':</span> <span class="pre">['created',</span> <span class="pre">'submitted',</span> <span class="pre">'started']}</span></em><a class="headerlink" href="#expyre.jobsdb.JobsDB.status_group" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="expyre.jobsdb.JobsDB.unlock">
+<span class="sig-name descname"><span class="pre">unlock</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/jobsdb.html#JobsDB.unlock"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.jobsdb.JobsDB.unlock" title="Permalink to this definition">#</a></dt>
+<dd><p>unlocks the sqlite database</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="expyre.jobsdb.JobsDB.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/jobsdb.html#JobsDB.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.jobsdb.JobsDB.update" title="Permalink to this definition">#</a></dt>
+<dd><p>Update some field of job</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>str</em>) – unique id of job to update</p></li>
+<li><p><strong>from_dir</strong> (<em>str</em>) – field(s) to update</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – field(s) to update</p></li>
+<li><p><strong>system</strong> (<em>str</em>) – field(s) to update</p></li>
+<li><p><strong>remote_id</strong> (<em>str</em>) – field(s) to update</p></li>
+<li><p><strong>remote_status</strong> (<em>str</em>) – field(s) to update</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-expyre.resources">
+<span id="expyre-resources-module"></span><h2>expyre.resources module<a class="headerlink" href="#module-expyre.resources" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="expyre.resources.Resources">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">expyre.resources.</span></span><span class="sig-name descname"><span class="pre">Resources</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_nodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_cores</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_mem_tot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_mem_per_core</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partitions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queues</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/resources.html#Resources"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.resources.Resources" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Resources required for a task, including time, memory, cores/nodes, and particular
+partitions/queues.  Mainly consists of code that selects appropriate partition/queue from
+the list associated with each System.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_time</strong> (<em>int</em><em>, </em><em>str</em>) – max time for job in sec (int) or time spec (str)</p></li>
+<li><p><strong>num_nodes</strong> (<em>int</em>) – number of nodes to use, mutually exclusive with num_cores, one is required</p></li>
+<li><p><strong>num_cores</strong> (<em>int</em>) – number of cores to use, mutually exclusive with num_nodes, one is required</p></li>
+<li><p><strong>max_mem_tot</strong> (<em>int/str</em><em>, </em><em>default None</em>) – total max mem in kB (int) or memory spec (str), mutually exclusive with max_mem_per_core</p></li>
+<li><p><strong>max_mem_per_core</strong> (<em>int/str</em><em>, </em><em>default None</em>) – per-core max mem in kB (int) or memory spec (str), mutually exclusive with max_mem_tot</p></li>
+<li><p><strong>partitions/queues</strong> (<em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>default None</em>) – regexps for types of node that can be used</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="expyre.resources.Resources.find_nodes">
+<span class="sig-name descname"><span class="pre">find_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">partitions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exact_fit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partial_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/resources.html#Resources.find_nodes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.resources.Resources.find_nodes" title="Permalink to this definition">#</a></dt>
+<dd><p>find a node type that accommodates requested resources</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>partitions</strong> (<em>dict</em>) – properties of available partitions (only used internally by system.py, so “queues”
+synonymn is not implemented here).</p></li>
+<li><p><strong>exact_fit</strong> (<em>bool</em><em>, </em><em>default True</em>) – only return nodes that exactly satisfy the number of cores</p></li>
+<li><p><strong>partial_node</strong> (<em>bool</em><em>, </em><em>default False</em>) – allow jobs that take less than one entire node, overrides exact_fit</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>partition</strong> (<em>str</em>) – name of partition selected</p></li>
+<li><p><strong>node_dict</strong> (<em>dict</em>) – various quantities of node</p>
+<ul>
+<li><p>num_nodes: int, total number of nodes needed</p></li>
+<li><p>num_cores: int, total number of cores needed</p></li>
+<li><p>num_cores_per_node: int, number of cores per node for selected nodes</p></li>
+</ul>
+</li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-expyre.subprocess">
+<span id="expyre-subprocess-module"></span><h2>expyre.subprocess module<a class="headerlink" href="#module-expyre.subprocess" title="Permalink to this heading">#</a></h2>
+<p>Functions dealing with running subprocesses, optionally on remote machines, handling
+quoting/shell escping, encoding/decoding, environment, and making sure that optional
+arguments needed for things like kerberized-ssh are set correctly.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="expyre.subprocess.FailedSubprocessWarning">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">expyre.subprocess.</span></span><span class="sig-name descname"><span class="pre">FailedSubprocessWarning</span></span><a class="reference internal" href="_modules/expyre/subprocess.html#FailedSubprocessWarning"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.subprocess.FailedSubprocessWarning" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">RuntimeWarning</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="expyre.subprocess.subprocess_copy">
+<span class="sig-prename descclassname"><span class="pre">expyre.subprocess.</span></span><span class="sig-name descname"><span class="pre">subprocess_copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">from_files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_host</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'_LOCAL_'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_host</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'_LOCAL_'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rcp_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'-a'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rcp_cmd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'rsync'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remsh_cmd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remsh_flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'-e'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dry_run</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/subprocess.html#subprocess_copy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.subprocess.subprocess_copy" title="Permalink to this definition">#</a></dt>
+<dd><p>Run a remote copy (e.g. rsync) in a subprocess, optionally to/from remote machine.  Exactly one
+machine has to be specified, and relative paths on that machine are relative to its home dir, like
+rsync.  If the specified machine is None the copy is local, but relative paths are still relative to
+home dir.</p>
+<p>Raises RuntimeError for non-zero return status.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>from_files</strong> (<em>str</em><em>, </em><em>Path</em><em>, </em><em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>list</em><em>(</em><em>Path</em><em>)</em>) – one or more files/directories to copy from (not including <a class="reference external" href="mailto:'user&#37;&#52;&#48;host">‘user<span>&#64;</span>host</a>:’ part)</p></li>
+<li><p><strong>to_file</strong> (<em>str</em><em>, </em><em>Path</em>) – _one_ file/directory to copy to (not including <a class="reference external" href="mailto:'user&#37;&#52;&#48;host">‘user<span>&#64;</span>host</a>:’ part)</p></li>
+<li><p><strong>from_host</strong> (<em>str</em><em>, </em><em>optional</em>) – [username&#64;]host.domain to copy from (no “:”), mutually exclusive with to_host, one is required.
+If None, use a local dir, but make relative paths relative to $HOME instead of to $PWD (like rsync with a host)</p></li>
+<li><p><strong>to_host</strong> (<em>str</em><em>, </em><em>optional</em>) – [username&#64;]host.domain to copy to (no “:”), mutually exclusive with from_host, one is required.
+If None, use a local dir, but make relative paths relative to $HOME instead of to $PWD (like rsync with a host)</p></li>
+<li><p><strong>rcp_args</strong> (<em>str</em><em>, </em><em>default '-a'</em>) – non-filename arguments to remote copy command</p></li>
+<li><p><strong>rcp_cmd</strong> (<em>str</em><em>, </em><em>default 'rsync'</em>) – command to do copy</p></li>
+<li><p><strong>remsh_cmd</strong> (<em>str</em><em>, </em><em>default EXPYRE_RSH env var</em><em> or </em><em>ssh</em>) – arguments to set shell command for rcp_cmd to use</p></li>
+<li><p><strong>retry</strong> (<em>optional</em>) – passed as retry argument to subprocess_run</p></li>
+<li><p><strong>remsh_flags</strong> (<em>str</em><em>, </em><em>default '-e'</em>) – flag to prefix to remsh_cmd when calling rcp_cmd</p></li>
+<li><p><strong>delete</strong> (<em>bool</em><em>, </em><em>default False</em>) – delete target files that aren’t in source with –delete option</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em><em>, </em><em>default False</em>) – verbose output</p></li>
+<li><p><strong>dry_run</strong> (<em>bool</em><em>, </em><em>default False</em>) – dry run, don’t actually copy</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="expyre.subprocess.subprocess_run">
+<span class="sig-prename descclassname"><span class="pre">expyre.subprocess.</span></span><span class="sig-name descname"><span class="pre">subprocess_run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">script</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shell</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'bash</span> <span class="pre">-c'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remsh_cmd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'_HOME_'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dry_run</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/subprocess.html#subprocess_run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.subprocess.subprocess_run" title="Permalink to this definition">#</a></dt>
+<dd><p>run a subprocess, optionally via ssh on a remote machine.  Raises RuntimeError for non-zero
+return status.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>host</strong> (<em>str</em>) – [username]&#64;machine.domain, or None for a locally run process</p></li>
+<li><p><strong>args</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – arguments to run, starting with command and followed by its command line args</p></li>
+<li><p><strong>script</strong> (<em>str</em><em>, </em><em>default None</em>) – text to write to process’s standard input</p></li>
+<li><p><strong>shell</strong> (<em>str</em><em>, </em><em>default 'bash -c'</em>) – shell to use, including any flags necessary for it to interpret the next argument
+as the commands to run (-c for bash)</p></li>
+<li><p><strong>remsh_command</strong> (<em>str</em><em> | </em><em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>default env var EXPYRE_RSH</em><em> or </em><em>'ssh'</em>) – command to start on remote host, usually ssh</p></li>
+<li><p><strong>retry</strong> (<em>(</em><em>int</em><em>, </em><em>int</em><em>)</em><em>, </em><em>default env var EXPYRE_RETRY.split</em><em>(</em><em>) or </em><em>(</em><em>2</em><em>, </em><em>5</em><em>)</em>) – number of times to retry and number of seconds to wait between each trial</p></li>
+<li><p><strong>in_dir</strong> (<em>str</em><em>, </em><em>default _HOME_</em>) – directory to cd into before running args, _HOME_ for home dir, _PWD_ for python current working directory (only for host == None)</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em><em>, </em><em>default False</em>) – verbose output</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>stdout, stderr</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output and error of subprocess, as strings (bytes.decode())</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-expyre.system">
+<span id="expyre-system-module"></span><h2>expyre.system module<a class="headerlink" href="#module-expyre.system" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="expyre.system.System">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">expyre.system.</span></span><span class="sig-name descname"><span class="pre">System</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partitions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scheduler</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">no_default_header</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">script_exec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/bin/bash'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_submit_cmds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rundir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rundir_extra</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remsh_cmd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/system.html#System"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.system.System" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Interface for a System that can run jobs remotely, including staging files from
+a local directory to a (config-specified) remote directory, submitting it with the correct
+kind of Scheduler, and staging back the results from the remote directory.  Does not report
+any other status directly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>host</strong> (<em>str</em>) – [username&#64;]machine.fqdn</p></li>
+<li><p><strong>partitions</strong> (<em>dict</em>) – dictionary describing partitions types</p></li>
+<li><p><strong>scheduler</strong> (<em>str</em><em>, </em><a class="reference internal" href="expyre.schedulers.html#expyre.schedulers.base.Scheduler" title="expyre.schedulers.base.Scheduler"><em>Scheduler</em></a>) – type of scheduler</p></li>
+<li><p><strong>header</strong> (<em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>optional</em>) – list of batch system header to use in every job, typically for system-specific things
+like selecting nodes</p></li>
+<li><p><strong>no_default_header</strong> (<em>bool</em><em>, </em><em>default False</em>) – do not automatically add default header fields, namely job name, partition/queue,
+max runtime, and stdout/stderr files</p></li>
+<li><p><strong>script_exec</strong> (<em>str</em><em>, </em><em>default '/bin/bash'</em>) – executable for 1st line of script</p></li>
+<li><p><strong>pre_submit_cmds</strong> (<em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>optional</em>) – command to run in process that does submission before actual job submission</p></li>
+<li><p><strong>commands</strong> (<em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>optional</em>) – list of commands to run at start of every job on machine</p></li>
+<li><p><strong>rundir</strong> (<em>str / None</em><em>, </em><em>default 'run_expyre' if host is not None</em><em>, </em><em>else None</em>) – path on remote machine to run in.  If absolute, used as is, and if relative, relative
+to (remote) home directory. If host is None, rundir is None means run directly
+in stage directory</p></li>
+<li><p><strong>rundir_extra</strong> (<em>str</em><em>, </em><em>default None</em>) – extra string to add to remote_rundir, e.g. per-project part of path</p></li>
+<li><p><strong>remsh_cmd</strong> (<em>str</em><em>, </em><em>default EXPYRE_RSH</em><em> or </em><em>'ssh'</em>) – remote shell command to use with this system</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="expyre.system.System.clean_rundir">
+<span class="sig-name descname"><span class="pre">clean_rundir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stage_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filenames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dry_run</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/system.html#System.clean_rundir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.system.System.clean_rundir" title="Permalink to this definition">#</a></dt>
+<dd><p>clean a remote stage directory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stage_dir</strong> (<em>str</em><em> | </em><em>Path</em>) – local stage directory path</p></li>
+<li><p><strong>files</strong> (<em>list</em><em>(</em><em>str</em><em>) or </em><em>None</em>) – list of files to replaced with ‘CLEANED’, or wipe entire directory if None</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em><em>, </em><em>default False</em>) – verbose output</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="expyre.system.System.get_remotes">
+<span class="sig-name descname"><span class="pre">get_remotes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">local_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subdir_glob</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/system.html#System.get_remotes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.system.System.get_remotes" title="Permalink to this definition">#</a></dt>
+<dd><p>get data from directories of remotely running jobs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>local_dir</strong> (<em>str</em>) – local directory to stage to</p></li>
+<li><p><strong>subdir_glob</strong> (<em>str</em><em>, </em><em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>default None</em>) – only get subdirectories that much one or more globs</p></li>
+<li><p><strong>delete</strong> (<em>bool</em><em>, </em><em>default False</em>) – delete local files that aren’t in remote dir</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em><em>, </em><em>default False</em>) – verbose output</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="expyre.system.System.initialize_remote_rundir">
+<span class="sig-name descname"><span class="pre">initialize_remote_rundir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/system.html#System.initialize_remote_rundir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.system.System.initialize_remote_rundir" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="expyre.system.System.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">script</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shell</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'bash</span> <span class="pre">-c'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'_HOME_'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dry_run</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/system.html#System.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.system.System.run" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="expyre.system.System.submit">
+<span class="sig-name descname"><span class="pre">submit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stage_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resources</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header_extra</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exact_fit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partial_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/system.html#System.submit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.system.System.submit" title="Permalink to this definition">#</a></dt>
+<dd><p>Submit a job on a remote machine, including staging out files</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>str</em>) – unique id for job</p></li>
+<li><p><strong>stage_dir</strong> (<em>str</em><em>, </em><em>Path</em>) – directory in which files have been prepared</p></li>
+<li><p><strong>resources</strong> (<a class="reference internal" href="#expyre.resources.Resources" title="expyre.resources.Resources"><em>Resources</em></a>) – resources to use for job</p></li>
+<li><p><strong>commands</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – commands to run in job script after per-machine commands</p></li>
+<li><p><strong>header_extra</strong> (<em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>optional</em>) – list of lines to append to system header for this job</p></li>
+<li><p><strong>exact_fit</strong> (<em>bool</em><em>, </em><em>default True</em>) – only match partitions that have nodes with exact match to number of cores</p></li>
+<li><p><strong>partial_node</strong> (<em>bool</em><em>, </em><em>default False</em>) – allow jobs that take less than an entire node</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>id of job on remote machine</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-expyre.units">
+<span id="expyre-units-module"></span><h2>expyre.units module<a class="headerlink" href="#module-expyre.units" title="Permalink to this heading">#</a></h2>
+<p>Units-related utilities for converting between various time and memory formats</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="expyre.units.mem_to_kB">
+<span class="sig-prename descclassname"><span class="pre">expyre.units.</span></span><span class="sig-name descname"><span class="pre">mem_to_kB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mem</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/units.html#mem_to_kB"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.units.mem_to_kB" title="Permalink to this definition">#</a></dt>
+<dd><p>convert memory to kB</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mem</strong> (<em>str</em><em> | </em><em>int</em>) – int: mem in kB
+str format “float[kKmMgGtT]b?”: memory in KB, MB, GB, TB, float cannot have exponent</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int memory in kB</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="expyre.units.time_to_HMS">
+<span class="sig-prename descclassname"><span class="pre">expyre.units.</span></span><span class="sig-name descname"><span class="pre">time_to_HMS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/units.html#time_to_HMS"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.units.time_to_HMS" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="expyre.units.time_to_sec">
+<span class="sig-prename descclassname"><span class="pre">expyre.units.</span></span><span class="sig-name descname"><span class="pre">time_to_sec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/units.html#time_to_sec"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.units.time_to_sec" title="Permalink to this definition">#</a></dt>
+<dd><p>convert time to seconds</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>t</strong> (<em>str</em><em>, </em><em>int</em>) – <ul class="simple">
+<li><p>int: time in sec</p></li>
+<li><p>str: format “float[sSmMhHdD]” number of seconds, minutes, hours, days, or “days(int)-HMS”         or “HMS”, with HMS being (HHHH:MM:SS | MM:SS | SS)</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int time in seconds</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-expyre.util">
+<span id="expyre-util-module"></span><h2>expyre.util module<a class="headerlink" href="#module-expyre.util" title="Permalink to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="expyre.util.remsh_cmd">
+<span class="sig-prename descclassname"><span class="pre">expyre.util.</span></span><span class="sig-name descname"><span class="pre">remsh_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/expyre/util.html#remsh_cmd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyre.util.remsh_cmd" title="Permalink to this definition">#</a></dt>
+<dd><p>Get remote command</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cmd</strong> (<em>str</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>cmd</strong> – Command set as <code class="docutils literal notranslate"><span class="pre">EXPYRE_RSH</span></code> environment variable, <code class="docutils literal notranslate"><span class="pre">&quot;ssh&quot;</span></code> otherwise.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-expyre">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-expyre" title="Permalink to this heading">#</a></h2>
+</div>
+</div>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="unit_testing.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Unit testing</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="expyre.cli.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">expyre.cli package</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subpackages">Subpackages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-expyre.config">expyre.config module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#global-variables">Global variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.config.init"><code class="docutils literal notranslate"><span class="pre">init()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.config.update_dict_leaves"><code class="docutils literal notranslate"><span class="pre">update_dict_leaves()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-expyre.func">expyre.func module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyRe"><code class="docutils literal notranslate"><span class="pre">ExPyRe</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyRe.cancel"><code class="docutils literal notranslate"><span class="pre">ExPyRe.cancel()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyRe.clean"><code class="docutils literal notranslate"><span class="pre">ExPyRe.clean()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyRe.from_jobsdb"><code class="docutils literal notranslate"><span class="pre">ExPyRe.from_jobsdb()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyRe.get_results"><code class="docutils literal notranslate"><span class="pre">ExPyRe.get_results()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyRe.id"><code class="docutils literal notranslate"><span class="pre">ExPyRe.id</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyRe.mark_processed"><code class="docutils literal notranslate"><span class="pre">ExPyRe.mark_processed()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyRe.start"><code class="docutils literal notranslate"><span class="pre">ExPyRe.start()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyRe.sync_remote_results_status"><code class="docutils literal notranslate"><span class="pre">ExPyRe.sync_remote_results_status()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyReJobDiedError"><code class="docutils literal notranslate"><span class="pre">ExPyReJobDiedError</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.func.ExPyReTimeoutError"><code class="docutils literal notranslate"><span class="pre">ExPyReTimeoutError</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-expyre.jobsdb">expyre.jobsdb module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.jobsdb.JobsDB"><code class="docutils literal notranslate"><span class="pre">JobsDB</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.jobsdb.JobsDB.add"><code class="docutils literal notranslate"><span class="pre">JobsDB.add()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.jobsdb.JobsDB.jobs"><code class="docutils literal notranslate"><span class="pre">JobsDB.jobs()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.jobsdb.JobsDB.possible_status"><code class="docutils literal notranslate"><span class="pre">JobsDB.possible_status</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.jobsdb.JobsDB.remove"><code class="docutils literal notranslate"><span class="pre">JobsDB.remove()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.jobsdb.JobsDB.status_group"><code class="docutils literal notranslate"><span class="pre">JobsDB.status_group</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.jobsdb.JobsDB.unlock"><code class="docutils literal notranslate"><span class="pre">JobsDB.unlock()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.jobsdb.JobsDB.update"><code class="docutils literal notranslate"><span class="pre">JobsDB.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-expyre.resources">expyre.resources module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.resources.Resources"><code class="docutils literal notranslate"><span class="pre">Resources</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.resources.Resources.find_nodes"><code class="docutils literal notranslate"><span class="pre">Resources.find_nodes()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-expyre.subprocess">expyre.subprocess module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.subprocess.FailedSubprocessWarning"><code class="docutils literal notranslate"><span class="pre">FailedSubprocessWarning</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.subprocess.subprocess_copy"><code class="docutils literal notranslate"><span class="pre">subprocess_copy()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.subprocess.subprocess_run"><code class="docutils literal notranslate"><span class="pre">subprocess_run()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-expyre.system">expyre.system module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.system.System"><code class="docutils literal notranslate"><span class="pre">System</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.system.System.clean_rundir"><code class="docutils literal notranslate"><span class="pre">System.clean_rundir()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.system.System.get_remotes"><code class="docutils literal notranslate"><span class="pre">System.get_remotes()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.system.System.initialize_remote_rundir"><code class="docutils literal notranslate"><span class="pre">System.initialize_remote_rundir()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.system.System.run"><code class="docutils literal notranslate"><span class="pre">System.run()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.system.System.submit"><code class="docutils literal notranslate"><span class="pre">System.submit()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-expyre.units">expyre.units module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.units.mem_to_kB"><code class="docutils literal notranslate"><span class="pre">mem_to_kB()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.units.time_to_HMS"><code class="docutils literal notranslate"><span class="pre">time_to_HMS()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.units.time_to_sec"><code class="docutils literal notranslate"><span class="pre">time_to_sec()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-expyre.util">expyre.util module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyre.util.remsh_cmd"><code class="docutils literal notranslate"><span class="pre">remsh_cmd()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-expyre">Module contents</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

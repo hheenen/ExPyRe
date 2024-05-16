@@ -1,0 +1,574 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scheduler Configuration file &#8212; ExPyRe  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'config';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Restarting an interrupted process" href="restarting.html" />
+    <link rel="prev" title="Resources" href="resources.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ExPyRe  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="basic_use.html">Basic use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Resources</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Scheduler Configuration file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="restarting.html">Restarting an interrupted process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment_variables.html">Environment Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line.html">Command line utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit_testing.html">Unit testing</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="expyre.html">expyre package</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="expyre.cli.html">expyre.cli package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expyre.schedulers.html">expyre.schedulers package</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/config.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Scheduler Configuration file</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-format">File format</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#node-property-dict-includes">Node property dict includes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#format-keys-used-in-header">format() keys used in header</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-file-location-and-project-scope">Configuration file location and project scope</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#default-header-lines">Default header lines</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#slurm">Slurm</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sun-grid-engine">Sun Grid Engine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pbs">PBS</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#config-json-example">config.json example</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="section" id="scheduler-configuration-file">
+<span id="config"></span><h1>Scheduler Configuration file<a class="headerlink" href="#scheduler-configuration-file" title="Permalink to this heading">#</a></h1>
+<p>The description of the available systems and associated resources is in a <code class="docutils literal notranslate"><span class="pre">config.json</span></code> file.</p>
+<div class="section" id="file-format">
+<h2>File format<a class="headerlink" href="#file-format" title="Permalink to this heading">#</a></h2>
+<p>The top level structure is a single dict with one <code class="docutils literal notranslate"><span class="pre">&quot;systems&quot;</span></code> key with a dict value, containing
+one key-value pair for each system. The key is the name of the system (used to select
+the system when evaluating the function).  See <code class="docutils literal notranslate"><span class="pre">expyre.System</span></code> docstring for full list. The
+value is a dict with the following keys:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;host&quot;</span></code>: string hostname, with optional <code class="docutils literal notranslate"><span class="pre">username&#64;`,</span> <span class="pre">or</span> <span class="pre">``null</span></code> for localhost without ssh.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;scheduler&quot;</span></code>: string indicating type of scheduler, currently <code class="docutils literal notranslate"><span class="pre">&quot;slurm&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;pbs&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;sge&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;commands&quot;</span></code>: optional list(str) with commands to run at beginning of every script on system, usually for things that set up the runtime such as environment modules (e.g. <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">vasp</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;header&quot;</span></code>: list(str) queuing system header lines.  Actual header is created by applying string formatting, i.e.  <code class="docutils literal notranslate"><span class="pre">str.format(**node_dict)</span></code>, replacing substrings such as <code class="docutils literal notranslate"><span class="pre">{num_nodes}</span></code>. Normally added to default header which sets job name, max time, node number, and stdout/stderr files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rundir</span></code>: str, optional, default <code class="docutils literal notranslate"><span class="pre">&quot;run_expyre&quot;</span></code>. Place for all remote files and remote execution.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">no_default_header</span></code>: bool, optional, default <code class="docutils literal notranslate"><span class="pre">False</span></code>. Do not put default lines (such as <code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-cwd</span></code> or automatically setting the job name) to the job submission script.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;remsh_cmd&quot;</span></code>: optional string remote shell command, default <code class="docutils literal notranslate"><span class="pre">&quot;ssh&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;rundir&quot;</span></code>: string for a path where the remote jobs should be run</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;partitions&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;queues&quot;</span></code>: dict with partitions/queues/node-type names as keys and dict of node properties as values.</p></li>
+</ul>
+<div class="section" id="node-property-dict-includes">
+<h3>Node property dict includes<a class="headerlink" href="#node-property-dict-includes" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;num_cores&quot;</span></code>: int number of cores per node</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;max_time&quot;</span></code>: max time, int for seconds, str for <code class="docutils literal notranslate"><span class="pre">&quot;&lt;N&gt;[smhd]&quot;</span></code> (case insensitive) or <code class="docutils literal notranslate"><span class="pre">&quot;&lt;dd&gt;-&lt;hh&gt;:&lt;mm&gt;:&lt;ss&gt;&quot;</span></code>. Leading parts are optional, so N1:N2 is N1 minutes + N2 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;max_mem&quot;</span></code>: max mem per node, int for kB, str for <code class="docutils literal notranslate"><span class="pre">&quot;&lt;N&gt;[kmgt]b?&quot;</span></code> (case insensitive).</p></li>
+</ul>
+</div>
+<div class="section" id="format-keys-used-in-header">
+<h3>format() keys used in header<a class="headerlink" href="#format-keys-used-in-header" title="Permalink to this heading">#</a></h3>
+<p>Available keys in <code class="docutils literal notranslate"><span class="pre">node_dict</span></code> which are normally used in this template:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;num_nodes&quot;</span></code>: int total number of nodes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;num_cores&quot;</span></code>: int total number of cores</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;num_cores_per_node&quot;</span></code>: int number of cores per node</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;partition&quot;</span></code>: name of partition (or queue), from <code class="docutils literal notranslate"><span class="pre">partitions</span></code> or <code class="docutils literal notranslate"><span class="pre">queues</span></code> dict keys,
+of specified explicitly in corresponding value dict</p></li>
+</ul>
+<p>Note that if <code class="docutils literal notranslate"><span class="pre">partial_node=True</span></code> is passed to <code class="docutils literal notranslate"><span class="pre">find_nodes</span></code> and the total number of cores is less
+than the number per node, <code class="docutils literal notranslate"><span class="pre">num_cores</span></code> and <code class="docutils literal notranslate"><span class="pre">num_cores_per_node</span></code> are <em>not</em> rounded up to an entire node.</p>
+<p>Additional keys that are generally only used by the internally generated parts of the header:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;id&quot;</span></code>: str (supposed to be guaranteed to be unique among current jobs within project) job id</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;max_time_HMS&quot;</span></code>: str max runtime in <code class="docutils literal notranslate"><span class="pre">hours:minutes:seconds</span></code> format</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="configuration-file-location-and-project-scope">
+<h2>Configuration file location and project scope<a class="headerlink" href="#configuration-file-location-and-project-scope" title="Permalink to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">expyre</span></code> root dir is the location of the jobs database and staging directories for each function call.
+By setting this appropriately the namespace associated with different projects can be separated.</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">EXPYRE_ROOT</span></code> env var is set, it is used as location for <code class="docutils literal notranslate"><span class="pre">config.json</span></code> as well as the <code class="docutils literal notranslate"><span class="pre">expyre</span></code> root.
+If it is not set, then <code class="docutils literal notranslate"><span class="pre">$HOME/.expyre</span></code> is first read, then starting from <code class="docutils literal notranslate"><span class="pre">$CWD/_expyre</span></code> and going up
+one directory at a time.  The expyre root is the directory closest to <code class="docutils literal notranslate"><span class="pre">$CWD</span></code> which contains a <code class="docutils literal notranslate"><span class="pre">_expyre</span></code>
+subdirectory.  The configuration consists of the content of <code class="docutils literal notranslate"><span class="pre">$HOME/.expyre/config.json</span></code>, modified by any
+entries that are present in <code class="docutils literal notranslate"><span class="pre">&lt;dir&gt;/_expyre/config.json</span></code>
+(with <code class="docutils literal notranslate"><span class="pre">home_systems[sys_name].dict.update(local_systems[sys_name])</span></code> on the dict associated with each
+system).  New systems are added, and a system dict value of <code class="docutils literal notranslate"><span class="pre">null</span></code> removes the system.  Currently within
+each system each key-value pair is overwritten, so you cannot directly disable one partition, only redefine
+the entire <code class="docutils literal notranslate"><span class="pre">&quot;partitions&quot;</span></code> dict.</p>
+</div>
+<div class="section" id="default-header-lines">
+<h2>Default header lines<a class="headerlink" href="#default-header-lines" title="Permalink to this heading">#</a></h2>
+<p>Below are the default headder lines added to every submission script.
+Values between curly brackets get filled in from <cite>Resources</cite> dictionary.</p>
+<div class="section" id="slurm">
+<h3>Slurm<a class="headerlink" href="#slurm" title="Permalink to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#SBATCH --job-name={id}</span>
+<span class="c1">#SBATCH --partition={partition}</span>
+<span class="c1">#SBATCH --time={max_time}</span>
+<span class="c1">#SBATCH --output=job.{id}.stdout</span>
+<span class="c1">#SBATCH --error=job.{id}.stderr</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sun-grid-engine">
+<h3>Sun Grid Engine<a class="headerlink" href="#sun-grid-engine" title="Permalink to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#$ -N N_{id}</span>
+<span class="c1">#$ -q {partition}</span>
+<span class="c1">#$ -l h_rt={max_time}</span>
+<span class="c1">#$ -o job.{id}.stdout</span>
+<span class="c1">#$ -e job.{id}.stderr</span>
+<span class="c1">#$ -S /bin/bash</span>
+<span class="c1">#$ -r n</span>
+<span class="c1">#$ -cwd</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pbs">
+<h3>PBS<a class="headerlink" href="#pbs" title="Permalink to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#PBS -N N_{id}</span>
+<span class="c1">#PBS -q {partition}</span>
+<span class="c1">#PBS -l walltime={max_time}</span>
+<span class="c1">#PBS -o job.{id}.stdout</span>
+<span class="c1">#PBS -e job.{id}.stderr</span>
+<span class="c1">#PBS -S /bin/bash</span>
+<span class="c1">#PBS -r n</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="config-json-example">
+<h2>config.json example<a class="headerlink" href="#config-json-example" title="Permalink to this heading">#</a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;systems&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;local&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;remsh_cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/usr/bin/ssh&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;scheduler&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;slurm&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;commands&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;module purge&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;module load python/3 compilers/gnu lapack ase quip vasp&quot;</span><span class="w"> </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;header&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;#SBATCH --nodes={num_nodes}&quot;</span><span class="p">,</span>
+<span class="w">                   </span><span class="s2">&quot;#SBATCH --ntasks={num_cores}&quot;</span><span class="p">,</span>
+<span class="w">                   </span><span class="s2">&quot;#SBATCH --ntasks-per-node={num_cores_per_node}&quot;</span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;partitions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;node16_old,node16_new&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;num_cores&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;max_time&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;max_mem&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;60GB&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">                        </span><span class="nt">&quot;node36&quot;</span><span class="p">:</span><span class="w">                </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;num_cores&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;max_time&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;max_mem&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;180GB&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">                        </span><span class="nt">&quot;node32&quot;</span><span class="p">:</span><span class="w">                </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;num_cores&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;max_time&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;max_mem&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;180GB&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">                        </span><span class="nt">&quot;node56_bigmem&quot;</span><span class="p">:</span><span class="w">         </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;num_cores&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">56</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;max_time&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;48:00:00&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;max_mem&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1500GB&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">                        </span><span class="nt">&quot;node72_bigmem&quot;</span><span class="p">:</span><span class="w">         </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;num_cores&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">72</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;max_time&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;48h&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;max_mem&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1500GB&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>For this system:</p>
+<ul class="simple">
+<li><p>Connect with <code class="docutils literal notranslate"><span class="pre">/usr/bin/ssh</span></code> to localhost</p></li>
+<li><p>use slurm commands to submit jobs</p></li>
+<li><p>do some env mod stuff in each job before running task</p></li>
+<li><p>use built-in header for job name, partition, time, stdout/stderr, and + specified 3 lines to select number of nodes</p></li>
+<li><dl class="simple">
+<dt>define 5 partitions (names in slurm <code class="docutils literal notranslate"><span class="pre">--partition</span></code> format), with varying numbers of cores, memory, and time limit</dt><dd><p>on the two <code class="docutils literal notranslate"><span class="pre">_bigmem</span></code> ones (same time, specified in different formats as an example).</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="resources.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Resources</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="restarting.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Restarting an interrupted process</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-format">File format</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#node-property-dict-includes">Node property dict includes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#format-keys-used-in-header">format() keys used in header</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-file-location-and-project-scope">Configuration file location and project scope</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#default-header-lines">Default header lines</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#slurm">Slurm</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sun-grid-engine">Sun Grid Engine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pbs">PBS</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#config-json-example">config.json example</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
